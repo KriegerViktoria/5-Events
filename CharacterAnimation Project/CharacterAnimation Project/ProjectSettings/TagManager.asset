@@ -41,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Hintergrund
+    uniqueID: 559925553
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -49,4 +52,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1091704449
+    locked: 0
+  - name: UI
+    uniqueID: 3327487489
     locked: 0
