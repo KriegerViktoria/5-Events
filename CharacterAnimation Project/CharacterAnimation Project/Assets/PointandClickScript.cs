@@ -20,18 +20,18 @@ public class PointandClickScript : MonoBehaviour
     public Animator MCAnimator;
 
     //für Step Audio
-    public AudioClip[] list;
-    AudioSource audio;
-    CharacterController characterController;
-    int number;
+    //public AudioClip[] list;
+   // AudioSource audio;
+    //CharacterController characterController;
+    //int number;
 
 
     // Start is called before the first frame update
     void Start()
     {
         //für Step Audio
-        audio = GetComponent<AudioSource>();
-        characterController = GetComponent<CharacterController>();
+       // audio = GetComponent<AudioSource>();
+        //characterController = GetComponent<CharacterController>();
 
         //list = new AudioClip[]
        // {
@@ -89,11 +89,11 @@ public class PointandClickScript : MonoBehaviour
         }
         //für Step Audio
 
-        if (isMoving)
-        {
-            audio.PlayOneShot(list[Random.Range(0, list.Length)]);
+       // if (isMoving)
+        //{
+        //    audio.PlayOneShot(list[Random.Range(0, list.Length)]);
             
-        }
+       // }
     }
 
     void CheckSpriteFlip()
