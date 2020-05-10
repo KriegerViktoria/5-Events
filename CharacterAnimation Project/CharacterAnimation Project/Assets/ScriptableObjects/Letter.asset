@@ -10,13 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Data
+  m_Name: Letter
   m_EditorClassIdentifier: Assembly-CSharp::Item
   prefab: {fileID: 5791423366571255986, guid: 20c5eaf02b666f04080bb9a48579e403, type: 3}
   CanCombineWith: []
-  InteractionWith:
-  - {fileID: 3308038302819518205, guid: 86cde8441d2cd8f4b87101d0298c34d7, type: 3}
-  description: 'Testobjekt
-
-    Brief soll in Mailbox'
+  InteractionWith: []
+  description: 
   Consumable: 0

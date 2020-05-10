@@ -19,9 +19,14 @@ public class PointandClickScript : MonoBehaviour
 
     public Animator MCAnimator;
 
+    //10.05 Inventory
+    private Inventory inventory;
+    public GameObject itemButton;
+    public GameObject effect;
+
     //für Step Audio
     //public AudioClip[] list;
-   // AudioSource audio;
+    // AudioSource audio;
     //CharacterController characterController;
     //int number;
 
@@ -30,16 +35,18 @@ public class PointandClickScript : MonoBehaviour
     void Start()
     {
         //für Step Audio
-       // audio = GetComponent<AudioSource>();
+        // audio = GetComponent<AudioSource>();
         //characterController = GetComponent<CharacterController>();
 
         //list = new AudioClip[]
-       // {
-       // (AudioClip)Resources.Load("Grass 1"),
-       // (AudioClip)Resources.Load("Grass 2")
-       // };
+        // {
+        // (AudioClip)Resources.Load("Grass 1"),
+        // (AudioClip)Resources.Load("Grass 2")
+        // };
 
-     }
+        // 10.05 Inventory
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -82,6 +89,8 @@ public class PointandClickScript : MonoBehaviour
                 {
                     //Einsammeln und im Skript speichern --> um es als Schlüssel zu verwenden
                     hit.collider.gameObject.SetActive(false);
+
+                    
                 }
             }
           
