@@ -5,7 +5,7 @@ using UnityEditor.UI;
 public class Item : ScriptableObject
 {
     public GameObject prefab;
-  //  public Texture2D InventoryPicture;
+    public Texture2D InventoryPicture;
 
     public Item[] CanCombineWith;
     public GameObject[] InteractionWith;
