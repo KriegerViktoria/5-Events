@@ -1781,7 +1781,11 @@ PolygonCollider2D:
       - {x: 115.296616, y: -5.160124}
       - {x: 109.99272, y: -5.505146}
       - {x: 83.9696, y: -3.8711045}
-      - {x: 63.06334, y: -3.9701247}
+      - {x: 75.86602, y: -3.8370914}
+      - {x: 73.85879, y: -5.766668}
+      - {x: 68.0479, y: -8.484526}
+      - {x: 60.687763, y: -7.8075953}
+      - {x: 57.82088, y: -5.267166}
       - {x: 32.555965, y: -5.763039}
       - {x: 29.082142, y: -4.10116}
       - {x: 16.454985, y: -3.56255}
@@ -1790,8 +1794,9 @@ PolygonCollider2D:
       - {x: -73.84465, y: -8.532657}
       - {x: -125.466064, y: -9.044263}
       - {x: -134.67172, y: -9.848313}
-      - {x: -146.9995, y: -8.968086}
-      - {x: -150.28413, y: -9.076768}
+      - {x: -142.6531, y: -12.6434765}
+      - {x: -145.02359, y: -12.50392}
+      - {x: -147.06027, y: -12.300618}
       - {x: -152.94836, y: -9.421302}
       - {x: -148.01613, y: -15.23}
       - {x: 162.45334, y: -15.2300005}
@@ -2196,8 +2201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff20dcde52bae9c41aeb4ae11d246d7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemButton: {fileID: 1941028030}
-  ScriptableObject: {fileID: 0}
+  ScriptableObject: {fileID: 11400000, guid: 9108eebbed0f0244d91516943f935c34, type: 2}
 --- !u!1 &2013950369
 GameObject:
   m_ObjectHideFlags: 0
@@ -2570,6 +2574,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 163408577}
     m_Modifications:
+    - target: {fileID: 625542303104142423, guid: 20c5eaf02b666f04080bb9a48579e403,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5791423366571255984, guid: 20c5eaf02b666f04080bb9a48579e403,
         type: 3}
       propertyPath: m_LocalPosition.x

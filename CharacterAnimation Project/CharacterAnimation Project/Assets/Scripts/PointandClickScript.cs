@@ -34,15 +34,7 @@ public class PointandClickScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //für Step Audio
-        // audio = GetComponent<AudioSource>();
-        //characterController = GetComponent<CharacterController>();
 
-        //list = new AudioClip[]
-        // {
-        // (AudioClip)Resources.Load("Grass 1"),
-        // (AudioClip)Resources.Load("Grass 2")
-        // };
 
         // 10.05 Inventory
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
@@ -85,13 +77,7 @@ public class PointandClickScript : MonoBehaviour
                     //Überprüfen ob Sprite-Flip notwendig ist
                     CheckSpriteFlip();
                 }
-                else if(hit.collider.gameObject.tag == "Collectable")
-                {
-                    //Einsammeln und im Skript speichern --> um es als Schlüssel zu verwenden
-                    hit.collider.gameObject.SetActive(false);
-
-                    
-                }
+              
             }
           
 

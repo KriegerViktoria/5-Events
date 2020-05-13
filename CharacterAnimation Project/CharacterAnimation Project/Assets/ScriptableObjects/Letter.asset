@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 04b6ac7a96382d4449072efc2a7e8f0e, type: 3}
   m_Name: Letter
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  prefab: {fileID: 5791423366571255986, guid: 20c5eaf02b666f04080bb9a48579e403, type: 3}
-  InventoryPicture: {fileID: 2800000, guid: 3dca219b53a25a84296d35e7b78993be, type: 3}
-  CanCombineWith: []
-  InteractionWith:
-  - {fileID: 3308038302819518205, guid: 86cde8441d2cd8f4b87101d0298c34d7, type: 3}
+  scenePrefab: {fileID: 5791423366571255986, guid: 20c5eaf02b666f04080bb9a48579e403,
+    type: 3}
+  inventoryPrefab: {fileID: 2209582817591142820, guid: 30035f05a6e239d4baef781360fc1dc3,
+    type: 3}
+  InteractionWith: []
   description: 
   Consumable: 0

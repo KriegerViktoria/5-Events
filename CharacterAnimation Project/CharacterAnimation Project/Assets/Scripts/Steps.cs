@@ -6,13 +6,13 @@ public class Steps : MonoBehaviour
 {
 
     public AudioClip[] list;
-    AudioSource audio;
+    AudioSource newAudio;
     CharacterController characterController;
     int number;
 
     void Start()
     {
-        audio = GetComponent<AudioSource>();
+        newAudio = GetComponent<AudioSource>();
         characterController = GetComponent<CharacterController>();
         //Loading the items into the array
         list = new AudioClip[]
