@@ -7,8 +7,9 @@ public class Item : ScriptableObject
     public GameObject scenePrefab;
     public GameObject inventoryPrefab;
 
-    //public Item[] CanCombineWith;
+    public Combination[] Combinations;
     public GameObject[] InteractionWith;
+
     [TextArea(15,20)]
     public string description;
 

@@ -16,6 +16,8 @@ MonoBehaviour:
     type: 3}
   inventoryPrefab: {fileID: 2209582817591142820, guid: 30035f05a6e239d4baef781360fc1dc3,
     type: 3}
-  InteractionWith: []
+  Combinations: []
+  InteractionWith:
+  - {fileID: 3308038302819518205, guid: 86cde8441d2cd8f4b87101d0298c34d7, type: 3}
   description: 
   Consumable: 0
