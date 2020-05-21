@@ -38,7 +38,10 @@ public class Pickup : MonoBehaviour
                         inventory.items[i] = 1; // makes sure that the slot is now considered FULL
                         Instantiate(ScriptableObject.inventoryPrefab, inventory.slots[i].transform, false); // spawn the button so that the player can interact with it
                         Destroy(gameObject);
+                        DontDestroyOnLoad(ScriptableObject.inventoryPrefab);
+                        DontDestroyOnLoad(ScriptableObject.inventoryPrefab.transform);
                         break;
+                       
                     }
                 }
             }

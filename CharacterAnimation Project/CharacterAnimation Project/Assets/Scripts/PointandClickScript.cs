@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//20.05 scenewechsel
+using UnityEngine.SceneManagement;
 
 public class PointandClickScript : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public class PointandClickScript : MonoBehaviour
     public Vector3 mousePosWorld;
     public Vector2 mousePos2d;
     RaycastHit2D hit;
+
+   // public float[] playerpos; 
 
     public GameObject player;
 
@@ -24,11 +28,6 @@ public class PointandClickScript : MonoBehaviour
     public GameObject itemButton;
     public GameObject effect;
 
-    //für Step Audio
-    //public AudioClip[] list;
-    // AudioSource audio;
-    //CharacterController characterController;
-    //int number;
 
 
     // Start is called before the first frame update
@@ -37,12 +36,16 @@ public class PointandClickScript : MonoBehaviour
 
 
         // 10.05 Inventory
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        //inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        //playerpos = new float[2];
+        //playerpos[1] = player.transform.position.x;
+        //playerpos[2] = player.transform.position.y;
     }
 
     // Update is called once per frame
     void Update()
     {
+
        if(Input.GetMouseButtonDown(0))
         {
           // MousePosition muss umgewandelt werden, da sonst die Kooridinaten der Screenspace genommen wird
@@ -77,18 +80,18 @@ public class PointandClickScript : MonoBehaviour
                     //Überprüfen ob Sprite-Flip notwendig ist
                     CheckSpriteFlip();
                 }
-              
+          
             }
           
 
         }
-        //für Step Audio
 
-       // if (isMoving)
-        //{
-        //    audio.PlayOneShot(list[Random.Range(0, list.Length)]);
-            
-       // }
+    }
+
+    //Daten Speichern Versuch 21.05
+    private void OnDestroy()
+    {
+      //  PlayerPrefs.SetFloat("playerPos", playerpos);
     }
 
     void CheckSpriteFlip()

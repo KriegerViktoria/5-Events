@@ -9,7 +9,7 @@ public class Spawn : MonoBehaviour {
 
     private void Start()
     {
-        playerPos = GameObject.FindGameObjectWithTag("PlayerPos").GetComponent<Transform>();
+        playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     public void SpawnItem() {

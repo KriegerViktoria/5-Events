@@ -14,4 +14,5 @@ public class Item : ScriptableObject
     public string description;
 
     public bool Consumable;
+
 }
