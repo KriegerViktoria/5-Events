@@ -121,6 +121,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &101576006 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3606506275397790967, guid: 698159dbb50f16b408ae6d4fcae2b1f1,
+    type: 3}
+  m_PrefabInstance: {fileID: 4434907455695271585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &101576010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101576006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ec7dcee565c9754f87a6e4c9e435d4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 101576006}
 --- !u!1 &132133116
 GameObject:
   m_ObjectHideFlags: 0
@@ -3020,16 +3039,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c62e760b5a1473341b207427c0fb2ec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDisplay: {fileID: 0}
-  sentences:
-  - 'Girl: He''s alive! But he''s barely breathing...'
-  - "Boy: Maybe he hurt his wing? Look, it\u2019s all twisted.."
-  - 'Girl: You''re right but...maybe he''s just starving.'
-  - "Boy: I have an idea. You look for some food in the woods and I\u2019ll look
-    for something to stitch him up at my house."
-  - "Girl: Oh right, your Mom used to be a doctor! Okay, quick, let\u2019s go."
-  typingSpeed: 0
-  continueButton: {fileID: 0}
+--- !u!114 &1509730239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509730236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1562719466
 GameObject:
   m_ObjectHideFlags: 0
@@ -3334,7 +3371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 123fcd64f90a0564aac872ec4461a04b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: Hausfarmer_vs2
+  levelToLoad: 
   mousePos: {x: 0, y: 0, z: 0}
   mainCam: {fileID: 963194227}
   mousePosWorld: {x: 0, y: 0, z: 0}
@@ -3947,7 +3984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b15d86bdfdcc24886164dc93449cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 1
+  index: 0
 --- !u!114 &1863972852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4377,7 +4414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b15d86bdfdcc24886164dc93449cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 2
+  index: 0
 --- !u!114 &1944365793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4509,7 +4546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b15d86bdfdcc24886164dc93449cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 2
+  index: 0
 --- !u!114 &1951477944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4609,6 +4646,25 @@ RectTransform:
   m_AnchoredPosition: {x: 203.09995, y: -467}
   m_SizeDelta: {x: 49.27, y: 46.04}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1992102574 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8035597935851294001, guid: 26c8fbb01b14a0d45925bee9b7123c20,
+    type: 3}
+  m_PrefabInstance: {fileID: 6207991881699702698}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1992102578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992102574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ec7dcee565c9754f87a6e4c9e435d4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 1992102574}
 --- !u!1 &2010589542 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5023779401782530963, guid: c7d3bb9dfa211c04ebe9cfaaa96a40c0,
@@ -4864,9 +4920,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 2134281450}
   sentences:
-  - What is this place?
-  - And...
-  - Who am I?
+  - 1
+  - 2
+  - 3
   typingSpeed: 0
   continueButton: {fileID: 1844164851}
 --- !u!1 &2136519094
@@ -4901,7 +4957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b15d86bdfdcc24886164dc93449cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 1
+  index: 0
 --- !u!114 &2136519096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5032,7 +5088,7 @@ PrefabInstance:
     - target: {fileID: 955605770173243903, guid: 29b489f382d79224ebfff4cd8d6c807c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 381.41202
+      value: 22.112019
       objectReference: {fileID: 0}
     - target: {fileID: 955605770173243903, guid: 29b489f382d79224ebfff4cd8d6c807c,
         type: 3}
@@ -5170,52 +5226,52 @@ PrefabInstance:
     - target: {fileID: 1157918848089036719, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.029164461
+      value: -0.02916428
       objectReference: {fileID: 0}
     - target: {fileID: 1157918848089036719, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9995746
+      value: 0.9995747
       objectReference: {fileID: 0}
     - target: {fileID: 1157918848493649145, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.003276705
+      value: -0.0032766457
       objectReference: {fileID: 0}
     - target: {fileID: 1157918848493649145, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99999464
+      value: 0.9999947
       objectReference: {fileID: 0}
     - target: {fileID: 1157918848779110398, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000012293457
+      value: 0.000001825392
       objectReference: {fileID: 0}
     - target: {fileID: 1157918848824027469, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.006518974
+      value: 0.006517558
       objectReference: {fileID: 0}
     - target: {fileID: 1157918848824027469, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99997884
+      value: 0.9999788
       objectReference: {fileID: 0}
     - target: {fileID: 1361566100990877375, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.98198247
+      value: -0.9819828
       objectReference: {fileID: 0}
     - target: {fileID: 1361566100990877375, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.18897238
+      value: 0.18897043
       objectReference: {fileID: 0}
     - target: {fileID: 1362287029393382325, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 343.8
+      value: -15.5
       objectReference: {fileID: 0}
     - target: {fileID: 1362287029393382325, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
@@ -5270,12 +5326,12 @@ PrefabInstance:
     - target: {fileID: 1830637491145558609, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.16983153
+      value: 0.16983035
       objectReference: {fileID: 0}
     - target: {fileID: 1830637491145558609, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.98547316
+      value: 0.98547333
       objectReference: {fileID: 0}
     - target: {fileID: 1880282497321444444, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
@@ -5295,22 +5351,22 @@ PrefabInstance:
     - target: {fileID: 2849230290821577434, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.07327282
+      value: 0.07327622
       objectReference: {fileID: 0}
     - target: {fileID: 2849230290821577434, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.997312
+      value: 0.9973118
       objectReference: {fileID: 0}
     - target: {fileID: 3434690659117897851, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000055972396
+      value: 0.000000115551494
       objectReference: {fileID: 0}
     - target: {fileID: 5917732617308946788, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.0040619904
+      value: 0.004061396
       objectReference: {fileID: 0}
     - target: {fileID: 5917732617308946788, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
@@ -5320,7 +5376,7 @@ PrefabInstance:
     - target: {fileID: 5959195847540398183, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.010470002
+      value: -0.010469757
       objectReference: {fileID: 0}
     - target: {fileID: 5981439697647304370, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
@@ -5330,12 +5386,12 @@ PrefabInstance:
     - target: {fileID: 8252056264351520329, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.1445091
+      value: 0.14450799
       objectReference: {fileID: 0}
     - target: {fileID: 8252056264351520329, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.98950356
+      value: 0.9895037
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19c293eba6d3a014ea306eb423de5bf8, type: 3}
@@ -5575,6 +5631,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: papertest
       objectReference: {fileID: 0}
+    - target: {fileID: 8668224789762560920, guid: 698159dbb50f16b408ae6d4fcae2b1f1,
+        type: 3}
+      propertyPath: ScriptableObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 1cb0b44d7535b234e9dd212fbc203428,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 698159dbb50f16b408ae6d4fcae2b1f1, type: 3}
 --- !u!1001 &5023779402148428533
@@ -5771,12 +5833,12 @@ PrefabInstance:
     - target: {fileID: 5085305490337459868, guid: 51ed73cd0e300b240941ef283ed409ef,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 375.51926
+      value: 22.113808
       objectReference: {fileID: 0}
     - target: {fileID: 5085305490337459868, guid: 51ed73cd0e300b240941ef283ed409ef,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.719437
+      value: 25.498383
       objectReference: {fileID: 0}
     - target: {fileID: 5085305490337459868, guid: 51ed73cd0e300b240941ef283ed409ef,
         type: 3}
@@ -5927,6 +5989,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Letter
       objectReference: {fileID: 0}
+    - target: {fileID: 5791423366571255986, guid: 20c5eaf02b666f04080bb9a48579e403,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20c5eaf02b666f04080bb9a48579e403, type: 3}
 --- !u!1001 &6207991881699702698
@@ -5936,6 +6003,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 163408577}
     m_Modifications:
+    - target: {fileID: 677134159696420451, guid: 26c8fbb01b14a0d45925bee9b7123c20,
+        type: 3}
+      propertyPath: ScriptableObject
+      value: 
+      objectReference: {fileID: 11400000, guid: e481ca2901e14c44095fd8e3109abb60,
+        type: 2}
     - target: {fileID: 3382029997369859050, guid: 26c8fbb01b14a0d45925bee9b7123c20,
         type: 3}
       propertyPath: m_LocalPosition.x
