@@ -26,7 +26,7 @@ public class Door : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
 
         if (Input.GetMouseButtonDown(0))

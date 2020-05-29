@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawn : MonoBehaviour {
+public class Drop : MonoBehaviour
+{
 
     public Transform playerPos;
-    public GameObject item;
+    public Item lastItem;
 
     public void Start()
     {
         playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
-    public void SpawnItem() {
-        Instantiate(item, playerPos.position, Quaternion.identity);
+    public void DropItem()
+    {
+        Instantiate(lastItem, playerPos.position, Quaternion.identity);
     }
 }
