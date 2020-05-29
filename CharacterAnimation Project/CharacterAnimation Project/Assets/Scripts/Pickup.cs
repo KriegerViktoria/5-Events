@@ -37,13 +37,13 @@ public class Pickup : MonoBehaviour
                       // Instantiate(effect, transform.position, Quaternion.identity);
                         inventory.items[i] = 1; // makes sure that the slot is now considered FULL
                         GameObject newGameObject = Instantiate(ScriptableObject.inventoryPrefab, inventory.slots[i].transform, false); // spawn the button so that the player can interact with it
-
+                 
                         RectTransform newRectTransform = newGameObject.GetComponent<RectTransform>();
                         newRectTransform.localPosition = Vector3.zero;
 
                         Destroy(gameObject);
-                        DontDestroyOnLoad(ScriptableObject.inventoryPrefab);
-                        DontDestroyOnLoad(ScriptableObject.inventoryPrefab.transform);
+                        //DontDestroyOnLoad(ScriptableObject.inventoryPrefab);
+                        //DontDestroyOnLoad(ScriptableObject.inventoryPrefab.transform);
                         break;
                        
                     }
