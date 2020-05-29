@@ -6,15 +6,16 @@ public class Drop : MonoBehaviour
 {
 
     public Transform playerPos;
-    public Item lastItem;
+    Item DropItem;
 
     public void Start()
     {
         playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
-    public void DropItem()
+    public void ItemDrop()
     {
+      
         Instantiate(lastItem, playerPos.position, Quaternion.identity);
     }
 }
