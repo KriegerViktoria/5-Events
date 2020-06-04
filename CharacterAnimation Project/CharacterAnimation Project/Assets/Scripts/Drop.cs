@@ -16,6 +16,6 @@ public class Drop : MonoBehaviour
     public void ItemDrop()
     {
       
-        Instantiate(lastItem, playerPos.position, Quaternion.identity);
+       // Instantiate(lastItem, playerPos.position, Quaternion.identity);
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Door : MonoBehaviour
 {
     public GameObject SpawnPoint;
-    public Camera newCamera;
+  
     private GameObject Player;
 
     public Vector3 mousePos;
@@ -15,6 +15,9 @@ public class Door : MonoBehaviour
     public Vector2 mousePos2d;
     RaycastHit2D hit;
     public GameObject Blende;
+
+    public GameObject cmOld;
+    public GameObject cmNew;
 
     // Start is called before the first frame update
     void Start()
@@ -54,9 +57,8 @@ public class Door : MonoBehaviour
                 //27.05 Scenenübergang
                 Blende.GetComponent<SpriteRenderer>().enabled = true;
                 Player.transform.position = SpawnPoint.transform.position;
-                mainCam.enabled = false;
-               newCamera.enabled = true;
-
+                cmOld.SetActive(false);
+                cmNew.SetActive(true);
                 
                 
             }
