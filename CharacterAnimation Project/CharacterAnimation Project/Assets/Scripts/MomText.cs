@@ -14,6 +14,7 @@ public class MomText : MonoBehaviour
 
     public void StartText()
     {
+        print("Starting TypeMom");
         StartCoroutine(TypeMom());
     }
 
@@ -28,7 +29,7 @@ public class MomText : MonoBehaviour
 
     IEnumerator TypeMom()
     {
-
+        print("Still starting TypeMom");
         foreach (char letter in sentencesMom[indexMom].ToCharArray())
         {
             textDisplayMom.text += letter;

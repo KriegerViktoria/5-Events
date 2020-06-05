@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenePrefab: {fileID: 8035597935851294001, guid: 26c8fbb01b14a0d45925bee9b7123c20,
     type: 3}
-  inventoryPrefab: {fileID: 1737033944505981347, guid: 102e77dd800d1e2459590102acb97268,
+  inventoryPrefab: {fileID: 4664652681513862484, guid: d02e7f5a597508f4fbeb3ca37d7d1a3c,
     type: 3}
   Combinations:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: b2119f4bb6b22bc4e936c3cdda3cd0ee, type: 2}
   InteractionWith: []
   description: 
   Consumable: 0

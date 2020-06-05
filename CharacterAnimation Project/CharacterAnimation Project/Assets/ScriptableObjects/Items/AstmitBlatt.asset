@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04b6ac7a96382d4449072efc2a7e8f0e, type: 3}
-  m_Name: Letter
+  m_Name: AstmitBlatt
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  scenePrefab: {fileID: 5791423366571255986, guid: 20c5eaf02b666f04080bb9a48579e403,
+  scenePrefab: {fileID: 3930939201777508605, guid: c12e83102cf25f94f9b09f1f6ae11d18,
     type: 3}
-  inventoryPrefab: {fileID: 3264781596728141316, guid: 2cb69955a5b1d204cb84a87c53cc185d,
+  inventoryPrefab: {fileID: 3930939201777508605, guid: c12e83102cf25f94f9b09f1f6ae11d18,
     type: 3}
   Combinations: []
-  InteractionWith:
-  - {fileID: 3308038302819518205, guid: 86cde8441d2cd8f4b87101d0298c34d7, type: 3}
+  InteractionWith: []
   description: 
   Consumable: 0

@@ -53,9 +53,9 @@ public class PointandClickScript : MonoBehaviour
           
             mousePos = Input.mousePosition;
            
-                        print("Screen Space: " + mousePos);
+                       // print("Screen Space: " + mousePos);
             mousePosWorld = mainCam.ScreenToWorldPoint(mousePos);
-                        print("World Space: " + mousePosWorld);
+                        //print("World Space: " + mousePosWorld);
 
             //Muss MousePosWorld in einen Vector2 umwandeln, da Physics2D/Raycast nur damit arbeiten kann
             mousePos2d = new Vector2(mousePosWorld.x, mousePosWorld.y);
