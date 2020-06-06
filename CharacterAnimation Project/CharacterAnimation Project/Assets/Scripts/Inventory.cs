@@ -31,6 +31,7 @@ public class Inventory : MonoBehaviour
                 {
                     print("Combination found" + CurrentItem.Combinations[j].Result);
                     for (int i = 0; i < inventory.items.Length; i++)
+                    //test 06.06.2020
                     {
                         if (inventory.items[i] == 0)
                         {   // check whether the slot is EMPTY
