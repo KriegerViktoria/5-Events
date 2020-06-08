@@ -11,6 +11,7 @@ public class Inventory : MonoBehaviour
     public Item lastItem;
 
     private Inventory inventory;
+    
 
 
     public void CheckCombination(Item CurrentItem)

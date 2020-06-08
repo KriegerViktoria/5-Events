@@ -27,7 +27,7 @@ public class PointandClickScript : MonoBehaviour
     private Inventory inventory;
     public GameObject itemButton;
     public GameObject effect;
-
+    public MomText MomText;
 
 
     // Start is called before the first frame update
@@ -80,7 +80,12 @@ public class PointandClickScript : MonoBehaviour
                     //Überprüfen ob Sprite-Flip notwendig ist
                     CheckSpriteFlip();
                 }
-          
+
+                if (hit.collider.gameObject.name == "Mom_Kid")
+                {
+                    print("Starting TypeMom");
+                    StartCoroutine(MomText.TypeMom());
+                }
             }
           
 

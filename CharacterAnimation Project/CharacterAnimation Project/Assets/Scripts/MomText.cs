@@ -12,11 +12,7 @@ public class MomText : MonoBehaviour
     public GameObject continueButtonMom;
 
 
-    public void StartText()
-    {
-        print("Starting TypeMom");
-        StartCoroutine(TypeMom());
-    }
+  
 
     private void Update()
     {
@@ -27,13 +23,14 @@ public class MomText : MonoBehaviour
     }
 
 
-    IEnumerator TypeMom()
+    public IEnumerator TypeMom()
     {
         print("Still starting TypeMom");
         foreach (char letter in sentencesMom[indexMom].ToCharArray())
         {
             textDisplayMom.text += letter;
             yield return new WaitForSeconds(typingSpeedMom);
+          
         }
     }
 
