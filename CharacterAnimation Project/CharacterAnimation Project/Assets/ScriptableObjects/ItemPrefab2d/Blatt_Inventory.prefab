@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 7954746130635222116}
   - component: {fileID: 6573123547301593224}
   - component: {fileID: 2088704923698385464}
-  - component: {fileID: 2773443965757540950}
+  - component: {fileID: 8202967424383563926}
   m_Layer: 0
   m_Name: Blatt_Inventory
   m_TagString: Untagged
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6947600970759037575}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2773443965757540950
+--- !u!114 &8202967424383563926
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
