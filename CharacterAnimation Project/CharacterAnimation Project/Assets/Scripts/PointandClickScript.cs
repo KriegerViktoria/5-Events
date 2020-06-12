@@ -28,7 +28,7 @@ public class PointandClickScript : MonoBehaviour
     private Inventory inventory;
     public GameObject itemButton;
     public GameObject effect;
-    public MomText MomText;
+    
 
 
     void Start()
@@ -75,17 +75,9 @@ public class PointandClickScript : MonoBehaviour
                     CheckSpriteFlip();
                 }
 
-                if (hit.collider.gameObject.name == "Mom_Kid")
-                {
-                    print("Starting TypeMom");
-                    StartCoroutine(MomText.TypeMom());
-                }
-
-                //11.06. Interact script
-                if (hit.collider.gameObject.tag == "Interactable")
-                {
-                   
-                }
+                         
+                                  
+               
             }
           
 
