@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenePrefab: {fileID: 8035597935851294001, guid: 26c8fbb01b14a0d45925bee9b7123c20,
     type: 3}
-  inventoryPrefab: {fileID: 4664652681513862484, guid: d02e7f5a597508f4fbeb3ca37d7d1a3c,
+  inventoryPrefab: {fileID: 3241365595332450760, guid: 51db0299502f863419a5aca34a311e8f,
     type: 3}
   Combinations:
   - {fileID: 11400000, guid: b2119f4bb6b22bc4e936c3cdda3cd0ee, type: 2}

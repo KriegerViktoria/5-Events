@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3264781596728141318}
   - component: {fileID: 3264781596728141321}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: Letter_Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,9 +117,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1880282497321444444, guid: 19c293eba6d3a014ea306eb423de5bf8,
+        - m_Target: {fileID: 6784599653758425915, guid: e7b4068968c3ed443be75f47fcf9982b,
             type: 3}
-          m_MethodName: CheckCombination
+          m_MethodName: Interaction
           m_Mode: 2
           m_Arguments:
             m_ObjectArgument: {fileID: 11400000, guid: 9108eebbed0f0244d91516943f935c34,

@@ -8,32 +8,58 @@ public class Inventory : MonoBehaviour
     public int[] items;
     public GameObject[] slots;
 
-    public bool firstClick = true;
+    public bool firstClick;
     public Item lastItem;
-    
+    public bool test; 
 
 
+
+    private void Start()
+    {
+        firstClick = false;
+        test = true;
+    }
+
+    private void Update()
+    {
+        //print(firstClick);
+        //print("test:" + test);
+    }
+    public void Testfunkion()
+    {
+        if (test)
+        {
+            print("help!!!!");
+        }
+    }
     public void CheckCombination(Item CurrentItem)
     {
-        print("Checking....");
-        if (firstClick)
+        if (test)
+        {
+            print("pls work");
+        }
+
+        print("Check");
+        if (firstClick == false)
         {
             lastItem = CurrentItem;
             print("Item:" + lastItem);
-            firstClick = false;
+            print("firstClick" + firstClick);
+            firstClick = true;
         }
         else
         {
             for (int j = 0; j < CurrentItem.Combinations.Length; j++)
             {
+                print("firstClick" + firstClick);
                 print(j);
-                print("item:" + lastItem);
+                //print("item:" + lastItem);
                 if (CurrentItem.Combinations[j].ItemB == lastItem)
                 {
                     print("Combination found" + CurrentItem.Combinations[j].Result);
                     for (int i = 0; i < items.Length; i++)
-                    //test 06.06.2020
                     {
+                        print("Alive");
                         if (items[i] == 0)
                         {   // check whether the slot is EMPTY
                             // Instantiate(effect, transform.position, Quaternion.identity);

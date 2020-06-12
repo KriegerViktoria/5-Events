@@ -8,6 +8,7 @@ TagManager:
   - Objekte
   - Collectable
   - Door
+  - Interactable
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 //20.05 scenewechsel
 using UnityEngine.SceneManagement;
 
@@ -30,16 +31,9 @@ public class PointandClickScript : MonoBehaviour
     public MomText MomText;
 
 
-    // Start is called before the first frame update
     void Start()
     {
 
-
-        // 10.05 Inventory
-        //inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-        //playerpos = new float[2];
-        //playerpos[1] = player.transform.position.x;
-        //playerpos[2] = player.transform.position.y;
     }
 
     // Update is called once per frame
@@ -85,6 +79,12 @@ public class PointandClickScript : MonoBehaviour
                 {
                     print("Starting TypeMom");
                     StartCoroutine(MomText.TypeMom());
+                }
+
+                //11.06. Interact script
+                if (hit.collider.gameObject.tag == "Interactable")
+                {
+                   
                 }
             }
           
