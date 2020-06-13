@@ -2435,6 +2435,11 @@ PrefabInstance:
       propertyPath: MCAnimator
       value: 
       objectReference: {fileID: 638405972}
+    - target: {fileID: 1157918847393525367, guid: 19c293eba6d3a014ea306eb423de5bf8,
+        type: 3}
+      propertyPath: speed
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 1880282497321444443, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
       propertyPath: list.Array.size
@@ -2478,7 +2483,7 @@ PrefabInstance:
     - target: {fileID: 1880282497321444445, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
       propertyPath: m_EdgeRadius
-      value: 1.37
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5981439697647304370, guid: 19c293eba6d3a014ea306eb423de5bf8,
         type: 3}
