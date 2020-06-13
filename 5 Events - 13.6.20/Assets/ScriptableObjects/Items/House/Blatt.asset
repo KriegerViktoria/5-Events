@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04b6ac7a96382d4449072efc2a7e8f0e, type: 3}
+  m_Name: Blatt
+  m_EditorClassIdentifier: 
+  scenePrefab: {fileID: 3606506275397790967, guid: 698159dbb50f16b408ae6d4fcae2b1f1,
+    type: 3}
+  inventoryPrefab: {fileID: 240192391437466850, guid: acfb27852e6cdea4ebd1d487d3263cd9,
+    type: 3}
+  Combinations:
+  - {fileID: 11400000, guid: 83a146e36e455044c9aed61ca18bc057, type: 2}
+  - {fileID: 11400000, guid: b2119f4bb6b22bc4e936c3cdda3cd0ee, type: 2}
+  InteractionWith: []
+  description: 
+  Consumable: 0
