@@ -6,8 +6,8 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour {
 
-	
-	public TextMeshProUGUI dialogueText;
+    public GameObject continueButton;
+    public TextMeshProUGUI dialogueText;
 
 	//public Animator animator;
 
@@ -45,7 +45,8 @@ public class DialogueManager : MonoBehaviour {
 		string sentence = sentences.Dequeue();
 		StopAllCoroutines();
 		StartCoroutine(TypeSentence(sentence));
-	}
+        
+    }
 
 	IEnumerator TypeSentence (string sentence)
 	{
@@ -54,12 +55,14 @@ public class DialogueManager : MonoBehaviour {
 		{
 			dialogueText.text += letter;
 			yield return null;
-		}
+            continueButton.SetActive(true);
+        }
 	}
 
 	void EndDialogue()
 	{
-		//animator.SetBool("IsOpen", false);
-	}
+        continueButton.SetActive(false);
+        //animator.SetBool("IsOpen", false);
+    }
 
 }

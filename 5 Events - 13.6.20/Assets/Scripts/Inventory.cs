@@ -62,7 +62,7 @@ public class Inventory : MonoBehaviour
                         print("Alive");
                         if (items[i] == 0)
                         {   // check whether the slot is EMPTY
-                            // Instantiate(effect, transform.position, Quaternion.identity);
+                            //Instantiate(effect, transform.position, Quaternion.identity);
                             items[i] = 1; // makes sure that the slot is now considered FULL
                             Instantiate(lastItem.Combinations[j].Result.inventoryPrefab, slots[i].transform, false); // spawn the button so that the player can interact with it
                             firstClick = true;

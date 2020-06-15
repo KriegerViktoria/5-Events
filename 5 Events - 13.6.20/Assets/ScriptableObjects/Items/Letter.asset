@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   scenePrefab: {fileID: 5791423366571255986, guid: 20c5eaf02b666f04080bb9a48579e403,
     type: 3}
-  inventoryPrefab: {fileID: 3264781596728141316, guid: 2cb69955a5b1d204cb84a87c53cc185d,
+  inventoryPrefab: {fileID: 8509333938803923334, guid: 30035f05a6e239d4baef781360fc1dc3,
     type: 3}
   Combinations: []
   InteractionWith:
