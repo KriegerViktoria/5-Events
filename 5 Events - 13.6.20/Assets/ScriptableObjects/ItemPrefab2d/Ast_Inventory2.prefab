@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3499571927462052002}
   - component: {fileID: 1910027011320986707}
   m_Layer: 0
-  m_Name: asttest 2D
+  m_Name: Ast_Inventory2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,13 +27,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3241365595332450760}
-  m_LocalRotation: {x: -0, y: -0, z: 0.4504884, w: 0.8927823}
+  m_LocalRotation: {x: 0, y: 0, z: 0.3502891, w: 0.93664163}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 53.550003}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 41.01}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -75,10 +75,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -967479807
-  m_SortingLayer: 4
+  m_SortingLayerID: 1960031149
+  m_SortingLayer: 5
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: df4ca847716f9054794107afaa0d865d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d1a895174fd095a4d8a22c450f2f80a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -113,20 +113,7 @@ MonoBehaviour:
   - eventID: 4
     callback:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1880282497321444444, guid: 19c293eba6d3a014ea306eb423de5bf8,
-            type: 3}
-          m_MethodName: CheckCombination
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: e481ca2901e14c44095fd8e3109abb60,
-              type: 2}
-            m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
 --- !u!114 &1910027011320986707
 MonoBehaviour:
   m_ObjectHideFlags: 0

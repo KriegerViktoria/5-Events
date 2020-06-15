@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Collectable
+  - Blende
   layers:
   - Default
   - TransparentFX
@@ -41,4 +43,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1203007855
+    locked: 0
+  - name: Objects
+    uniqueID: 2172293273
+    locked: 0
+  - name: Player
+    uniqueID: 1306194419
+    locked: 0
+  - name: Foreground
+    uniqueID: 96106309
+    locked: 0
+  - name: UI
+    uniqueID: 1960031149
     locked: 0

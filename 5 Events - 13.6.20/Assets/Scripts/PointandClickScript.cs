@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
-//20.05 scenewechsel
-using UnityEngine.SceneManagement;
+
 
 public class PointandClickScript : MonoBehaviour
 {
