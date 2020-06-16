@@ -12,7 +12,7 @@ public class Pickup : MonoBehaviour
     //sonst ist es im inventar
     private bool isTransform;
 
-
+    public GameObject inventoryObj;
  
 
     private void Start()
@@ -36,12 +36,14 @@ public class Pickup : MonoBehaviour
                     { // check whether the slot is EMPTY
                       // Instantiate(effect, transform.position, Quaternion.identity);
                         inventory.items[i] = 1; // makes sure that the slot is now considered FULL
-                        GameObject newGameObject = Instantiate(ScriptableObject.inventoryPrefab, inventory.slots[i].transform, false); // spawn the button so that the player can interact with it
-                 
-                        RectTransform newRectTransform = newGameObject.GetComponent<RectTransform>();
-                        newRectTransform.localPosition = Vector3.zero;
-
-                        Destroy(gameObject);
+                        inventoryObj.transform.position = inventory.slots[i].transform.position;
+                        // GameObject newGameObject = Instantiate(ScriptableObject.inventoryPrefab, inventory.slots[i].transform, false); // spawn the button so that the player can interact with it
+                        //
+                        // RectTransform newRectTransform = newGameObject.GetComponent<RectTransform>();
+                        // newRectTransform.localPosition = Vector3.zero;
+                        //
+                        inventoryObj.SetActive(true);
+                        this.gameObject.SetActive(false);
                         //DontDestroyOnLoad(ScriptableObject.inventoryPrefab);
                         //DontDestroyOnLoad(ScriptableObject.inventoryPrefab.transform);
                         break;

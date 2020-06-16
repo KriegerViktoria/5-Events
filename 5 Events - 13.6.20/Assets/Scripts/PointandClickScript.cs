@@ -1,22 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Networking;
 
 
 public class PointandClickScript : MonoBehaviour
 {
-    public Vector3 mousePos;
+    Vector3 mousePos;
     public Camera mainCam;
-    public Vector3 mousePosWorld;
-    public Vector2 mousePos2d;
+    Vector3 mousePosWorld;
+    Vector2 mousePos2d;
     RaycastHit2D hit;
 
    // public float[] playerpos; 
 
     public GameObject player;
 
-    public Vector2 targetPos;
+   Vector2 targetPos;
     public float speed;
     public bool isMoving;
     
@@ -41,6 +42,7 @@ public class PointandClickScript : MonoBehaviour
 
        if(Input.GetMouseButtonDown(0))
         {
+ 
           // MousePosition muss umgewandelt werden, da sonst die Kooridinaten der Screenspace genommen wird
           // Koordinaten würden sich wiederholen! 
           

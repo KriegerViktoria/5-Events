@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 611677843652106151}
   - component: {fileID: 4053241184822013690}
+  - component: {fileID: 2938701769989114761}
   - component: {fileID: 1708900138215446517}
   m_Layer: 0
   m_Name: Mailbox
@@ -87,6 +88,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2938701769989114761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3308038302819518205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa5c197369e9514590461e223ee1b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &1708900138215446517
 BoxCollider2D:
   m_ObjectHideFlags: 0
