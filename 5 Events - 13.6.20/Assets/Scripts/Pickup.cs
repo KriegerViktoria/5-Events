@@ -6,7 +6,7 @@ public class Pickup : MonoBehaviour
 {
 
     private Inventory inventory;
-    public Item ScriptableObject;
+   // public Item ScriptableObject;
     //public GameObject effect;
     //wenn ist isTransform == true dann liegt es in der Scene 
     //sonst ist es im inventar
