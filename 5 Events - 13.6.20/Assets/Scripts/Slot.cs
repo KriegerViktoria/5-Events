@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Slot : MonoBehaviour {
 
@@ -16,17 +17,17 @@ public class Slot : MonoBehaviour {
 
     private void Update()
     {
-        if (transform.childCount <= 0) {
+        if (transform.childCount == 1) {
             inventory.items[index] = 0;
         }
     }
 
-    public void Cross() {
-
-        foreach (Transform child in transform) {
-            child.GetComponent<Spawn>().SpawnItem();
-            GameObject.Destroy(child.gameObject);
-        }
+    public void OnDrop(PointerEventData eventData)
+    {
+        Debug.Log("InventoryDrop");
+           
+    }
+        //eventData.pointerDrag
     }
 
-}
+

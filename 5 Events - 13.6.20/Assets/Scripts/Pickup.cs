@@ -13,11 +13,13 @@ public class Pickup : MonoBehaviour
     private bool isTransform;
 
     public GameObject inventoryObj;
- 
+    private CanvasGroup canvasGroup;
+
 
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        canvasGroup = inventoryObj.GetComponent<CanvasGroup>();
         // TexinInventory = itemButton.InventoryPicture;
     }
 
@@ -37,13 +39,18 @@ public class Pickup : MonoBehaviour
                       // Instantiate(effect, transform.position, Quaternion.identity);
                         inventory.items[i] = 1; // makes sure that the slot is now considered FULL
                         inventoryObj.transform.position = inventory.slots[i].transform.position;
+                        inventoryObj.transform.SetParent(inventory.slots[i].transform);
                         // GameObject newGameObject = Instantiate(ScriptableObject.inventoryPrefab, inventory.slots[i].transform, false); // spawn the button so that the player can interact with it
                         //
                         // RectTransform newRectTransform = newGameObject.GetComponent<RectTransform>();
                         // newRectTransform.localPosition = Vector3.zero;
                         //
+                        
                         inventoryObj.SetActive(true);
+                        canvasGroup.blocksRaycasts = true;
+
                         this.gameObject.SetActive(false);
+
                         //DontDestroyOnLoad(ScriptableObject.inventoryPrefab);
                         //DontDestroyOnLoad(ScriptableObject.inventoryPrefab.transform);
                         break;

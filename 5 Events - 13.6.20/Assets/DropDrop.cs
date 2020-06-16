@@ -9,9 +9,11 @@ public class DropDrop : MonoBehaviour, IDropHandler
     public GameObject DropInScene;
     private RectTransform rectTransform;
     Vector3 currentposition;
+    private GameObject objects;
     public void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
+        objects = GameObject.Find("__________CAM UI__________/Canvas/Objects");
     }
 
     public void OnDrop(PointerEventData eventData)
@@ -25,6 +27,7 @@ public class DropDrop : MonoBehaviour, IDropHandler
             DropInScene.transform.position = this.transform.position;
             print("Drop");
             eventData.pointerDrag.SetActive(false);
+            eventData.pointerDrag.transform.SetParent(objects.transform);
         }
         //eventData.pointerDrag
     }
