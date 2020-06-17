@@ -9,27 +9,30 @@ public class DialogueManager : MonoBehaviour {
     public GameObject continueButton;
     public TextMeshProUGUI dialogueText;
 
-	//public Animator animator;
+    public PointandClickScript PSScript;
 
 	private Queue<string> sentences;
 
 	// Use this for initialization
 	void Start () {
 		sentences = new Queue<string>();
-	}
+      
+    }
 
 	public void StartDialogue (Dialogue dialogue)
 	{
+        PSScript.isMoving = false;
+
         print("Still Starting Dialogue");
-		//animator.SetBool("IsOpen", true);
-
-
+        //animator.SetBool("IsOpen", true);
+     
 		sentences.Clear();
 
 		foreach (string sentence in dialogue.sentences)
 		{
 			sentences.Enqueue(sentence);
-		}
+            PSScript.enabled = false;
+        }
 
 		DisplayNextSentence();
 	}
@@ -50,7 +53,8 @@ public class DialogueManager : MonoBehaviour {
 
 	IEnumerator TypeSentence (string sentence)
 	{
-		dialogueText.text = "";
+       
+        dialogueText.text = "";
 		foreach (char letter in sentence.ToCharArray())
 		{
 			dialogueText.text += letter;
@@ -62,6 +66,10 @@ public class DialogueManager : MonoBehaviour {
 	void EndDialogue()
 	{
         continueButton.SetActive(false);
+        dialogueText.text = "";
+        PSScript.enabled = true;
+
+
         //animator.SetBool("IsOpen", false);
     }
 

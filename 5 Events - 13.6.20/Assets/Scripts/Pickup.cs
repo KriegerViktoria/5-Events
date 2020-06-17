@@ -11,7 +11,7 @@ public class Pickup : MonoBehaviour
     //wenn ist isTransform == true dann liegt es in der Scene 
     //sonst ist es im inventar
     private bool isTransform;
-
+    public bool isNeeded;
     public GameObject inventoryObj;
     private CanvasGroup canvasGroup;
 
