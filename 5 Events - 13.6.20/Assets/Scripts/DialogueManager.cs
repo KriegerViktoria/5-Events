@@ -10,18 +10,20 @@ public class DialogueManager : MonoBehaviour {
     public TextMeshProUGUI dialogueText;
 
     public PointandClickScript PSScript;
+	public Animator MCAnimator;
 
 	private Queue<string> sentences;
 
 	// Use this for initialization
 	void Start () {
 		sentences = new Queue<string>();
-      
-    }
+
+	}
 
 	public void StartDialogue (Dialogue dialogue)
 	{
         PSScript.isMoving = false;
+		MCAnimator.SetBool("Walk", false);
 
         print("Still Starting Dialogue");
         //animator.SetBool("IsOpen", true);

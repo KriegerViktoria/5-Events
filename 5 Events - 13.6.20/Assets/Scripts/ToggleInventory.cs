@@ -4,29 +4,31 @@ using UnityEngine;
 
 public class ToggleInventory : MonoBehaviour
 {
-    public GameObject Inventory;
+    public GameObject inventory;
     bool firstClick;
-    RectTransform rectTransform;
     public UnityEngine.Vector3 ToggleOffScreen;
     public UnityEngine.Vector3 ToggleOnScreen;
+    //public GameObject test;
 
     // Start is called before the first frame update
     private void Awake()
     {
+      
         firstClick = true;
-        rectTransform = GetComponent<RectTransform>();
     }
     public void Toggle ()
     {
         if(firstClick)
         {
-            //  Inventory.GetComponent<RectTransform>().anchoredPosition.y 
-           // Inventory.GetComponent<RectTransform>().anchoredPosition.y = new Vector2(0, 609);
+            inventory.transform.position = ToggleOffScreen;
+            // Inventory.GetComponent<RectTransform>().anchoredPosition.y = new Vector2(0, 609);
+            // inventory.transform.position = inventory.transform.position + (0,10,0);
             firstClick = false;
+
         }
        else
         {
-            Inventory.transform.position = ToggleOnScreen;
+            inventory.transform.position = ToggleOnScreen;
             firstClick = true;
         }
     }
