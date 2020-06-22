@@ -6,8 +6,8 @@ public class ToggleInventory : MonoBehaviour
 {
     public GameObject inventory;
     bool firstClick;
-    public UnityEngine.Vector3 ToggleOffScreen;
-    public UnityEngine.Vector3 ToggleOnScreen;
+    public Vector3 ToggleOffScreen;
+    public Vector3 ToggleOnScreen;
     //public GameObject test;
 
     // Start is called before the first frame update
@@ -16,20 +16,22 @@ public class ToggleInventory : MonoBehaviour
       
         firstClick = true;
     }
-    public void Toggle ()
+    public void Toggle (RectTransform ToBeMoved)
     {
         if(firstClick)
         {
-            inventory.transform.position = ToggleOffScreen;
-            // Inventory.GetComponent<RectTransform>().anchoredPosition.y = new Vector2(0, 609);
+           // inventory.transform.position = ToggleOffScreen;
+            ToBeMoved.anchoredPosition = new Vector2(0, 609);
             // inventory.transform.position = inventory.transform.position + (0,10,0);
-            firstClick = false;
+            //firstClick = false;
 
         }
        else
         {
-            inventory.transform.position = ToggleOnScreen;
-            firstClick = true;
+            //RectTransform
+            ToBeMoved.anchoredPosition = ToggleOnScreen;
+            //firstClick = true;
         }
+        firstClick = !firstClick;
     }
 }

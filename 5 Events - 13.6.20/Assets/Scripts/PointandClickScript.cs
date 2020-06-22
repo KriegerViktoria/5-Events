@@ -115,8 +115,9 @@ public class PointandClickScript : MonoBehaviour
         {
             player.transform.position = Vector3.MoveTowards(player.transform.position, targetPos, speed);
             MCAnimator.SetBool("Walk", true);
+           // MCAnimator.SetBool("Idle", false);
 
-            if(player.transform.position.x == targetPos.x || player.transform.position.y == targetPos.y)
+            if (player.transform.position.x == targetPos.x || player.transform.position.y == targetPos.y)
             {
                 isMoving = false;
                 MCAnimator.SetBool("Walk", false);
