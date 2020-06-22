@@ -6,8 +6,8 @@ public class ToggleInventory : MonoBehaviour
 {
     public GameObject inventory;
     bool firstClick;
-    public Vector3 ToggleOffScreen;
-    public Vector3 ToggleOnScreen;
+    public Vector2 ToggleOffScreen;
+    public Vector2 ToggleOnScreen;
     //public GameObject test;
 
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class ToggleInventory : MonoBehaviour
         if(firstClick)
         {
            // inventory.transform.position = ToggleOffScreen;
-            ToBeMoved.anchoredPosition = new Vector2(0, 609);
+            ToBeMoved.anchoredPosition = ToggleOffScreen;
             // inventory.transform.position = inventory.transform.position + (0,10,0);
             //firstClick = false;
 

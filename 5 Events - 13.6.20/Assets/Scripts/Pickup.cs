@@ -16,7 +16,7 @@ public class Pickup : MonoBehaviour
     private CanvasGroup canvasGroup;
 
 
-    private void Start()
+    private void Awake()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         canvasGroup = inventoryObj.GetComponent<CanvasGroup>();

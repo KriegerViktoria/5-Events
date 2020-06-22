@@ -20,18 +20,19 @@ public class Door : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         Blende = GameObject.Find("Blende");
         BlendeAnimation = Blende.GetComponent<Animator>();
-
+       
     }
 
     // Update is called once per frame
     private void OnMouseDown()
     {
-        
+        Player.GetComponent<PointandClickScript>().isMoving = false;
+        Player.GetComponent<Animator>().SetBool("Walk", false);
         Player.transform.position = SpawnPoint.transform.position;
         cmOld.SetActive(false);
         cmNew.SetActive(true);
         BlendeAnimation.SetBool("DoorClicked", true);
-
+        
     }
 
     private void OnMouseUp()
