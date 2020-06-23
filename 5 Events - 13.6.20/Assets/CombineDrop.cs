@@ -25,7 +25,7 @@ public class CombineDrop : MonoBehaviour, IDropHandler
 
         if (eventData.pointerDrag == ItemToCombineWith)
         {
-            if (this.gameObject == GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/Diploma"))
+            if (this.gameObject == GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/Diploma") || this.gameObject == GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/Document") || this.gameObject == GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/FamilyPhoto"))
             {
                 this.gameObject.SetActive(false);
             }
