@@ -25,11 +25,19 @@ public class CombineDrop : MonoBehaviour, IDropHandler
 
         if (eventData.pointerDrag == ItemToCombineWith)
         {
-            this.gameObject.SetActive(false);
-            this.gameObject.transform.SetParent(objects.transform);
-            eventData.pointerDrag.SetActive(false);
-            eventData.pointerDrag.transform.SetParent(objects.transform);
+            if (this.gameObject == GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/Diploma"))
+            {
+                this.gameObject.SetActive(false);
+            }
+            else
+            {
+                this.gameObject.SetActive(false);
+                this.gameObject.transform.SetParent(objects.transform);
+                eventData.pointerDrag.SetActive(false);
+                eventData.pointerDrag.transform.SetParent(objects.transform);
+            }
 
+                    
             for (int i = 0; i < inventory.items.Length; i++)
             {
                 if (inventory.items[i] == 0)
@@ -38,7 +46,7 @@ public class CombineDrop : MonoBehaviour, IDropHandler
                     Result.transform.position = inventory.slots[i].transform.position;
                     Result.transform.SetParent(inventory.slots[i].transform);
 
-
+                    
                     //DontDestroyOnLoad(ScriptableObject.inventoryPrefab);
                     //DontDestroyOnLoad(ScriptableObject.inventoryPrefab.transform);
                     break;

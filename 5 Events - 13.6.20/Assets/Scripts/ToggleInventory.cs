@@ -22,6 +22,7 @@ public class ToggleInventory : MonoBehaviour
         {
            // inventory.transform.position = ToggleOffScreen;
             ToBeMoved.anchoredPosition = ToggleOffScreen;
+            this.GetComponent<RectTransform>().Rotate(new Vector3(0, 0, 180));
             // inventory.transform.position = inventory.transform.position + (0,10,0);
             //firstClick = false;
 
@@ -30,6 +31,7 @@ public class ToggleInventory : MonoBehaviour
         {
             //RectTransform
             ToBeMoved.anchoredPosition = ToggleOnScreen;
+            this.GetComponent<RectTransform>().Rotate(new Vector3(0, 0, 180));
             //firstClick = true;
         }
         firstClick = !firstClick;
