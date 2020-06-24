@@ -11,6 +11,8 @@ public class Dad_AnimationController : MonoBehaviour
     {
         DadAnimator.SetBool("Talk", false);
         DadAnimator.SetBool("Idle", false);
+        DadAnimator.SetBool("Lift", false);
+
 
     }
 
@@ -18,6 +20,7 @@ public class Dad_AnimationController : MonoBehaviour
     {
         DadAnimator.SetBool("Talk", false);
         DadAnimator.SetBool("Idle", true);
+        DadAnimator.SetBool("Lift", false);
     }
 
     public void TalkAnim()
@@ -25,5 +28,14 @@ public class Dad_AnimationController : MonoBehaviour
 
         DadAnimator.SetBool("Idle", false);
         DadAnimator.SetBool("Talk", true);
+        DadAnimator.SetBool("Lift", false);
+    }
+
+    public void LiftAnim()
+    {
+
+        DadAnimator.SetBool("Idle", false);
+        DadAnimator.SetBool("Talk", false);
+        DadAnimator.SetBool("Lift", true);
     }
 }
