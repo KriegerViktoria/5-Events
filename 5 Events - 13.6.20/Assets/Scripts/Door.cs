@@ -13,6 +13,7 @@ public class Door : MonoBehaviour
     public GameObject cmNew;
     Animator BlendeAnimation;
     public GameObject test;
+    public bool InRange;
 
 
     // Start is called before the first frame update
@@ -21,20 +22,35 @@ public class Door : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         Blende = GameObject.Find("Blende");
         BlendeAnimation = Blende.GetComponent<Animator>();
+        InRange = false;
        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        print("ActiveSpawn");
+        InRange = true;
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        print("DeactivateSpawn");
+        InRange = false;
     }
 
     // Update is called once per frame
     private void OnMouseDown()
-    {
-        Player.GetComponent<PointandClickScript>().isMoving = false;
-        Player.GetComponent<Animator>().SetBool("Walk", false);
-        Player.transform.position = SpawnPoint.transform.position;
-        cmOld.SetActive(false);
-        cmNew.SetActive(true);
-        BlendeAnimation.SetBool("DoorClicked", true);
-        test.GetComponent<dontwalk>().On = false;
-        
+  
+  {
+        if (InRange) { 
+      Player.GetComponent<PointandClickScript>().isMoving = false;
+      Player.GetComponent<Animator>().SetBool("Walk", false);
+      Player.transform.position = SpawnPoint.transform.position;
+      cmOld.SetActive(false);
+      cmNew.SetActive(true);
+      BlendeAnimation.SetBool("DoorClicked", true);
+      test.GetComponent<dontwalk>().On = false;
+        }
     }
 
     private void OnMouseUp()
@@ -43,5 +59,7 @@ public class Door : MonoBehaviour
         BlendeAnimation.SetBool("DoorClicked", false);
         test.GetComponent<dontwalk>().On = true;
     }
+
    
+
 }

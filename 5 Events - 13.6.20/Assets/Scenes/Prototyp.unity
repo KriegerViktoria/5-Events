@@ -514,6 +514,7 @@ MonoBehaviour:
   cmOld: {fileID: 1161110891}
   cmNew: {fileID: 1833638738}
   test: {fileID: 117351708}
+  InRange: 0
 --- !u!222 &40863222
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2273,6 +2274,7 @@ GameObject:
   - component: {fileID: 132110414}
   - component: {fileID: 132110413}
   - component: {fileID: 132110412}
+  - component: {fileID: 132110415}
   m_Layer: 0
   m_Name: Door_Stairs_to_Floor2
   m_TagString: Untagged
@@ -2309,7 +2311,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 4.5732727, y: 103.658714}
@@ -2341,6 +2343,7 @@ MonoBehaviour:
   cmOld: {fileID: 1833638738}
   cmNew: {fileID: 1161110891}
   test: {fileID: 77309037}
+  InRange: 0
 --- !u!222 &132110414
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2349,6 +2352,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132110410}
   m_CullTransparentMesh: 0
+--- !u!114 &132110415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132110410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a221df5ade91c3489e6c49c33269024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spawn: {fileID: 132110410}
+  inrange: 0
 --- !u!1 &133463348
 GameObject:
   m_ObjectHideFlags: 0
@@ -2895,6 +2912,7 @@ MonoBehaviour:
   cmOld: {fileID: 2079126476}
   cmNew: {fileID: 1161110891}
   test: {fileID: 2054757856}
+  InRange: 0
 --- !u!222 &189823318
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6053,6 +6071,7 @@ MonoBehaviour:
   cmOld: {fileID: 130040051}
   cmNew: {fileID: 1759555974}
   test: {fileID: 1277476458}
+  InRange: 0
 --- !u!222 &544172986
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6147,6 +6166,7 @@ MonoBehaviour:
   cmOld: {fileID: 130040051}
   cmNew: {fileID: 1418017457}
   test: {fileID: 1539204765}
+  InRange: 0
 --- !u!222 &557453379
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6861,6 +6881,7 @@ MonoBehaviour:
   cmOld: {fileID: 1161110891}
   cmNew: {fileID: 1393950025}
   test: {fileID: 117351708}
+  InRange: 0
 --- !u!222 &602072388
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8097,6 +8118,7 @@ MonoBehaviour:
   cmOld: {fileID: 130040051}
   cmNew: {fileID: 1460343950}
   test: {fileID: 1277476458}
+  InRange: 0
 --- !u!222 &723604769
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9328,6 +9350,7 @@ MonoBehaviour:
   cmOld: {fileID: 1418017457}
   cmNew: {fileID: 1050627896}
   test: {fileID: 786561621}
+  InRange: 0
 --- !u!222 &904750514
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9986,6 +10009,7 @@ MonoBehaviour:
   cmOld: {fileID: 2118149010}
   cmNew: {fileID: 1161110891}
   test: {fileID: 307490819}
+  InRange: 0
 --- !u!222 &945789431
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10332,6 +10356,7 @@ MonoBehaviour:
   cmOld: {fileID: 1161110891}
   cmNew: {fileID: 2079126476}
   test: {fileID: 117351708}
+  InRange: 0
 --- !u!222 &967500693
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12252,6 +12277,7 @@ MonoBehaviour:
   cmOld: {fileID: 1350694825}
   cmNew: {fileID: 130040051}
   test: {fileID: 1275762076}
+  InRange: 0
 --- !u!222 &1071645610
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13897,6 +13923,7 @@ MonoBehaviour:
   cmOld: {fileID: 1161110891}
   cmNew: {fileID: 508537088}
   test: {fileID: 117351708}
+  InRange: 0
 --- !u!222 &1218637890
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14608,6 +14635,7 @@ MonoBehaviour:
   cmOld: {fileID: 130040051}
   cmNew: {fileID: 1050627896}
   test: {fileID: 1277476458}
+  InRange: 0
 --- !u!222 &1265850356
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17459,6 +17487,7 @@ MonoBehaviour:
   cmOld: {fileID: 1460343950}
   cmNew: {fileID: 130040051}
   test: {fileID: 912165578}
+  InRange: 0
 --- !u!222 &1454085130
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17929,6 +17958,7 @@ MonoBehaviour:
   cmOld: {fileID: 130040051}
   cmNew: {fileID: 1833638738}
   test: {fileID: 1277476458}
+  InRange: 0
 --- !u!222 &1510172926
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19546,6 +19576,7 @@ MonoBehaviour:
   cmOld: {fileID: 1833638738}
   cmNew: {fileID: 130040051}
   test: {fileID: 77309037}
+  InRange: 0
 --- !u!222 &1628219433
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19789,6 +19820,7 @@ MonoBehaviour:
   cmOld: {fileID: 508537088}
   cmNew: {fileID: 1161110891}
   test: {fileID: 1005377225}
+  InRange: 0
 --- !u!222 &1630053709
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20547,6 +20579,7 @@ MonoBehaviour:
   cmOld: {fileID: 1393950025}
   cmNew: {fileID: 1161110891}
   test: {fileID: 968399892}
+  InRange: 0
 --- !u!222 &1717386138
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21192,7 +21225,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1743808696
 Animator:
   serializedVersion: 3
@@ -21219,7 +21252,7 @@ PlayableDirector:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743808695}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 8312e013c83a97144bc95a75100f7ef3, type: 2}
   m_InitialState: 1
@@ -21518,6 +21551,7 @@ MonoBehaviour:
   cmOld: {fileID: 1759555974}
   cmNew: {fileID: 130040051}
   test: {fileID: 1164064040}
+  InRange: 0
 --- !u!61 &1765299718
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21917,6 +21951,7 @@ MonoBehaviour:
   cmOld: {fileID: 130040051}
   cmNew: {fileID: 1350694825}
   test: {fileID: 1277476458}
+  InRange: 0
 --- !u!222 &1786728028
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23415,6 +23450,7 @@ MonoBehaviour:
   cmOld: {fileID: 1161110891}
   cmNew: {fileID: 2118149010}
   test: {fileID: 117351708}
+  InRange: 0
 --- !u!222 &1900487450
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23673,6 +23709,7 @@ MonoBehaviour:
   cmOld: {fileID: 1050627896}
   cmNew: {fileID: 130040051}
   test: {fileID: 1539204765}
+  InRange: 0
 --- !u!222 &1933590782
 CanvasRenderer:
   m_ObjectHideFlags: 0
