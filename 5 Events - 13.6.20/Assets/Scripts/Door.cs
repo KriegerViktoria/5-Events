@@ -12,6 +12,7 @@ public class Door : MonoBehaviour
     public GameObject cmOld;
     public GameObject cmNew;
     Animator BlendeAnimation;
+    public GameObject test;
 
 
     // Start is called before the first frame update
@@ -32,6 +33,7 @@ public class Door : MonoBehaviour
         cmOld.SetActive(false);
         cmNew.SetActive(true);
         BlendeAnimation.SetBool("DoorClicked", true);
+        test.GetComponent<dontwalk>().On = false;
         
     }
 
@@ -39,6 +41,7 @@ public class Door : MonoBehaviour
     {
 
         BlendeAnimation.SetBool("DoorClicked", false);
+        test.GetComponent<dontwalk>().On = true;
     }
    
 }

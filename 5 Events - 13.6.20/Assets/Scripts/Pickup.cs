@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,22 +12,46 @@ public class Pickup : MonoBehaviour
     //wenn ist isTransform == true dann liegt es in der Scene 
     //sonst ist es im inventar
     private bool isTransform;
-    public bool isNeeded;
+    public bool isNeeded = false;
     public GameObject inventoryObj;
     private CanvasGroup canvasGroup;
-
+  
 
     private void Awake()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         canvasGroup = inventoryObj.GetComponent<CanvasGroup>();
         // TexinInventory = itemButton.InventoryPicture;
+
+        if (isNeeded == false)
+        {
+            this.gameObject.layer = 2;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) {
-            print("Collider hit");
+        if (other.CompareTag("Range"))
+        {
+            print("Range Enter");
+            isNeeded = true;
+            this.gameObject.layer = 0;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Range"))
+        {
+            print("Range Exit");
+            isNeeded = false;
+            this.gameObject.layer = 2;
+        }
+    }
+
+    private void OnMouseDown()
+    {
+      
             isTransform = false;
 
             if (isTransform == false)
@@ -45,7 +70,7 @@ public class Pickup : MonoBehaviour
                         // RectTransform newRectTransform = newGameObject.GetComponent<RectTransform>();
                         // newRectTransform.localPosition = Vector3.zero;
                         //
-                        
+
                         inventoryObj.SetActive(true);
                         canvasGroup.blocksRaycasts = true;
 
@@ -54,7 +79,7 @@ public class Pickup : MonoBehaviour
                         //DontDestroyOnLoad(ScriptableObject.inventoryPrefab);
                         //DontDestroyOnLoad(ScriptableObject.inventoryPrefab.transform);
                         break;
-                       
+
                     }
                 }
             }
@@ -63,7 +88,6 @@ public class Pickup : MonoBehaviour
                 isTransform = true;
 
             }
-    }
+        }
 
     }
-}

@@ -9,11 +9,13 @@ public class PlayCutscene : MonoBehaviour
     public PlayableDirector Cutscene;
     public GameObject Trigger;
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         {
             Cutscene.Play();
             Trigger.SetActive(false);
+        
         }
     }
 
