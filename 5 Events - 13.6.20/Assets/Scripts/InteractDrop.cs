@@ -57,6 +57,8 @@ public class InteractDrop : MonoBehaviour, IDropHandler
             GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/Dirt").SetActive(true);
             GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/Trashcan").SetActive(true);
             GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/Cutscene7Trigger").SetActive(true);
+            GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/ReactionTrigger").SetActive(true);
+            GameObject.Find("/__________Collectibles_______/").GetComponent<Pickup>().isNeeded = true;
             influence.SetActive(true);
             this.gameObject.SetActive(false);
             // this.gameObject.GetComponent<OfficetoDirty>().MakeDirty();

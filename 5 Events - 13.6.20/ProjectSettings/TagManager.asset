@@ -8,6 +8,7 @@ TagManager:
   - Collectable
   - Blende
   - Range
+  - DoorCollider
   layers:
   - Default
   - TransparentFX
@@ -45,8 +46,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Sky
+    uniqueID: 3827955313
+    locked: 0
   - name: Background
     uniqueID: 1203007855
+    locked: 0
+  - name: NPC
+    uniqueID: 3647360445
     locked: 0
   - name: Objects
     uniqueID: 2172293273
@@ -56,9 +63,6 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 96106309
-    locked: 0
-  - name: Foregound
-    uniqueID: 2199414767
     locked: 0
   - name: UI
     uniqueID: 1960031149
