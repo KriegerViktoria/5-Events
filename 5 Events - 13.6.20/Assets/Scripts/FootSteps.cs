@@ -34,7 +34,7 @@ public class FootSteps : MonoBehaviour
 
     }
 
-    private void Step()
+    public void Step()
     {
 
 
