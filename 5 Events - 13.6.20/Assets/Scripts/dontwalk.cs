@@ -17,7 +17,11 @@ public class dontwalk : MonoBehaviour
     {
         if (On)
         {
-            playerpos = collision.transform.position;
+            if (collision.CompareTag("Player"))
+            {
+                print("player is on");
+                playerpos = collision.transform.position;
+            }
         }
     }
 
@@ -25,11 +29,15 @@ public class dontwalk : MonoBehaviour
     {
         if (On)
         {
-            player.GetComponent<PointandClickScript>().isMoving = false;
-            player.GetComponent<Animator>().SetBool("Walk", false);
-            player.transform.position = playerpos;
-        }    
+            if (collision.CompareTag("Player"))
+            {
+                print("player exit");
+                player.GetComponent<PointandClickScript>().isMoving = false;
+                player.GetComponent<Animator>().SetBool("Walk", false);
+                player.transform.position = playerpos;
+            }
         }
+    }
 }
 
 

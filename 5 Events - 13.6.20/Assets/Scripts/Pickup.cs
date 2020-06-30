@@ -7,12 +7,12 @@ public class Pickup : MonoBehaviour
 {
 
     private Inventory inventory;
-   // public Item ScriptableObject;
+    // public Item ScriptableObject;
     //public GameObject effect;
     //wenn ist isTransform == true dann liegt es in der Scene 
     //sonst ist es im inventar
-    private bool isTransform;
-    public bool isNeeded = false;
+    public bool isNeeded;
+    public bool inRange = false;
     public GameObject inventoryObj;
     private CanvasGroup canvasGroup;
   
@@ -23,12 +23,12 @@ public class Pickup : MonoBehaviour
         canvasGroup = inventoryObj.GetComponent<CanvasGroup>();
         // TexinInventory = itemButton.InventoryPicture;
 
-        if (isNeeded == false)
+        if (inRange == false)
         {
             this.gameObject.layer = 2;
         }
 
-        if (isNeeded == true)
+        if (inRange == true)
         {
             this.gameObject.layer = 0;
         }
@@ -39,7 +39,7 @@ public class Pickup : MonoBehaviour
         if (other.CompareTag("Range"))
         {
             print("Range Enter");
-            isNeeded = true;
+            inRange = true;
             this.gameObject.layer = 0;
         }
     }
@@ -49,16 +49,14 @@ public class Pickup : MonoBehaviour
         if (other.CompareTag("Range"))
         {
             print("Range Exit");
-            isNeeded = false;
+            inRange = false;
             this.gameObject.layer = 2;
         }
     }
 
-    private void OnMouseDown()
-    {
-      
+    private void OnMouseDown() { 
 
-            if (isNeeded == true)
+            if (inRange == true && isNeeded == true)
             {
 
                 for (int i = 0; i < inventory.items.Length; i++)

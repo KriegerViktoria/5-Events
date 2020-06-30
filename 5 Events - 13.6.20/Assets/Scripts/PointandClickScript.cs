@@ -39,8 +39,8 @@ public class PointandClickScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-       if(Input.GetMouseButtonDown(0))
+        player.transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        if (Input.GetMouseButtonDown(0))
         {
  
           // MousePosition muss umgewandelt werden, da sonst die Kooridinaten der Screenspace genommen wird
