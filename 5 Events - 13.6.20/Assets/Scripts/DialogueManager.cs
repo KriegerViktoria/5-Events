@@ -22,6 +22,10 @@ public class DialogueManager : MonoBehaviour {
 
 	public void StartDialogue (Dialogue dialogue)
 	{
+		////
+		dialogueText.color = dialogue.TextColor;
+		////
+
         PSScript.isMoving = false;
 		MCAnimator.SetBool("Walk", false);
 

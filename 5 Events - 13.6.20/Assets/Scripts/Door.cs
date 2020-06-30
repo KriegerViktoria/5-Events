@@ -8,21 +8,20 @@ public class Door : MonoBehaviour
 {
     public GameObject SpawnPoint;
     private GameObject Player;
-    private GameObject Blende;
+    public GameObject Blende;
     public GameObject cmOld;
     public GameObject cmNew;
     Animator BlendeAnimation;
-    public GameObject test;
-    public bool InRange;
+    public GameObject room;
+ 
 
 
     // Start is called before the first frame update
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
-        Blende = GameObject.Find("Blende");
         BlendeAnimation = Blende.GetComponent<Animator>();
-        InRange = false;
+   
        
     }
 
@@ -36,7 +35,7 @@ public class Door : MonoBehaviour
             cmOld.SetActive(false);
             cmNew.SetActive(true);
             BlendeAnimation.SetBool("DoorClicked", true);
-            test.GetComponent<dontwalk>().On = false;
+            room.GetComponent<dontwalk>().On = false;
         }
     }
 
@@ -45,7 +44,7 @@ public class Door : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             BlendeAnimation.SetBool("DoorClicked", false);
-            test.GetComponent<dontwalk>().On = true;
+            room.GetComponent<dontwalk>().On = true;
         }
     }
 

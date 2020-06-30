@@ -27,6 +27,11 @@ public class Pickup : MonoBehaviour
         {
             this.gameObject.layer = 2;
         }
+
+        if (isNeeded == true)
+        {
+            this.gameObject.layer = 0;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -52,9 +57,8 @@ public class Pickup : MonoBehaviour
     private void OnMouseDown()
     {
       
-            isTransform = false;
 
-            if (isTransform == false)
+            if (isNeeded == true)
             {
 
                 for (int i = 0; i < inventory.items.Length; i++)
@@ -83,11 +87,7 @@ public class Pickup : MonoBehaviour
                     }
                 }
             }
-            else
-            {
-                isTransform = true;
-
-            }
+  
         }
 
     }

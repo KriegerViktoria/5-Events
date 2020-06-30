@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Experimental.Rendering.LWRP;
 
 public class InteractDrop : MonoBehaviour, IDropHandler
 {
@@ -10,10 +11,18 @@ public class InteractDrop : MonoBehaviour, IDropHandler
     private GameObject objects;
     GameObject DoorToOffice;
     public GameObject influence;
+    public GameObject script;
+    public Color numpad_right;
+    public Color numpad_wrong;
+    private GameObject wrongpass1;
+    private GameObject wrongpass2;
+
     private void Awake()
     {
         objects = GameObject.Find("__________CAM UI__________/Canvas/Objects");
         DoorToOffice = GameObject.Find("/__________WRS UI__________/Canvas/-----DOORS/Door_Floor2_to_Office");
+        wrongpass1 = GameObject.Find("__________CAM UI__________/Canvas/Objects/WrongPasswort_Inventory");
+        wrongpass1 = GameObject.Find("__________CAM UI__________/Canvas/Objects/WrongPasswort2_Inventory");
     }
     public void OnDrop(PointerEventData eventData)
     {
@@ -24,6 +33,8 @@ public class InteractDrop : MonoBehaviour, IDropHandler
             print("Sent Mail");
             eventData.pointerDrag.SetActive(false);
             eventData.pointerDrag.transform.SetParent(objects.transform);
+            this.gameObject.SetActive(false);
+            eventData.pointerDrag.GetComponent<DialogueTrigger>().TriggerDialogue();
         }
 
       if (eventData.pointerDrag == ItemToInteractWith && this.gameObject == GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/LockedDoor"))
@@ -34,10 +45,18 @@ public class InteractDrop : MonoBehaviour, IDropHandler
           DoorToOffice.SetActive(true);
           this.gameObject.SetActive(false);
           GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/Cutscene5Trigger").SetActive(true);
+            influence.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().color = numpad_right;
             //this.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue();
         }
 
-        if (eventData.pointerDrag == ItemToInteractWith && this.gameObject == GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/BuildLadder"))
+        if (eventData.pointerDrag == wrongpass1 && this.gameObject == GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/LockedDoor") || eventData.pointerDrag == wrongpass2 && this.gameObject == GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/LockedDoor"))
+        {
+            eventData.pointerDrag.SetActive(false);
+            eventData.pointerDrag.transform.SetParent(objects.transform);
+            influence.GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>().color = numpad_wrong;
+        }
+
+            if (eventData.pointerDrag == ItemToInteractWith && this.gameObject == GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/BuildLadder"))
         {
             this.gameObject.SetActive(false);
             GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/BuildLadder2").SetActive(true);
@@ -51,15 +70,7 @@ public class InteractDrop : MonoBehaviour, IDropHandler
 
         if (eventData.pointerDrag == ItemToInteractWith && this.gameObject == GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/BuildLadder3"))
         {
-            GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/ThickBookPlace").SetActive(true);
-            GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/LaundryBasketPlace").SetActive(true);
-            GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/ChairPlace").SetActive(true);
-            GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/Dirt").SetActive(true);
-            GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/Trashcan").SetActive(true);
             GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/Cutscene7Trigger").SetActive(true);
-            GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/ReactionTrigger").SetActive(true);
-            GameObject.Find("/__________Collectibles_______/").GetComponent<Pickup>().isNeeded = true;
-            influence.SetActive(true);
             this.gameObject.SetActive(false);
             // this.gameObject.GetComponent<OfficetoDirty>().MakeDirty();
             //Start Cutscene with boy climbing the ladder and falling
