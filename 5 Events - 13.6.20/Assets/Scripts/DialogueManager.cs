@@ -23,7 +23,7 @@ public class DialogueManager : MonoBehaviour {
 	public void StartDialogue (Dialogue dialogue)
 	{
 		////
-		dialogueText.color = dialogue.TextColor;
+		//dialogueText.color = dialogue.TextColor;
 		////
 
         PSScript.isMoving = false;
@@ -65,7 +65,14 @@ public class DialogueManager : MonoBehaviour {
 		{
 			dialogueText.text += letter;
 			yield return null;
-            continueButton.SetActive(true);
+
+            if (dialogueText.text == sentence) {
+
+                continueButton.SetActive(true);
+            }
+            else {
+                continueButton.SetActive(false);
+            }
         }
 	}
 

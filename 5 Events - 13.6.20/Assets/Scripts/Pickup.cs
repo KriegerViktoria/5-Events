@@ -6,7 +6,7 @@ using UnityEngine;
 public class Pickup : MonoBehaviour
 {
 
-    private Inventory inventory;
+    public Inventory inventory;
     // public Item ScriptableObject;
     //public GameObject effect;
     //wenn ist isTransform == true dann liegt es in der Scene 
@@ -15,9 +15,11 @@ public class Pickup : MonoBehaviour
     public bool inRange = false;
     public GameObject inventoryObj;
     private CanvasGroup canvasGroup;
+    public Lightswitch lightswitch;
+    
   
 
-    private void Awake()
+    public void Awake()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         canvasGroup = inventoryObj.GetComponent<CanvasGroup>();
@@ -34,7 +36,7 @@ public class Pickup : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Range"))
         {
@@ -44,7 +46,7 @@ public class Pickup : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    public void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Range"))
         {
@@ -54,7 +56,7 @@ public class Pickup : MonoBehaviour
         }
     }
 
-    private void OnMouseDown() { 
+    public void OnMouseDown() { 
 
             if (inRange == true && isNeeded == true)
             {
@@ -75,6 +77,7 @@ public class Pickup : MonoBehaviour
 
                         inventoryObj.SetActive(true);
                         canvasGroup.blocksRaycasts = true;
+                        lightswitch.Light.SetActive(false);
 
                         this.gameObject.SetActive(false);
 
