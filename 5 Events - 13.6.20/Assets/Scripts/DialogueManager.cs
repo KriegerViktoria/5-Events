@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour {
 
     public PointandClickScript PSScript;
 	public Animator MCAnimator;
+    public Animator Blackbar;
 
 	private Queue<string> sentences;
 
@@ -28,7 +29,8 @@ public class DialogueManager : MonoBehaviour {
 
         PSScript.isMoving = false;
 		MCAnimator.SetBool("Walk", false);
-
+        Blackbar.SetBool("Dialogue", true);
+    
         print("Still Starting Dialogue");
         //animator.SetBool("IsOpen", true);
      
@@ -81,7 +83,7 @@ public class DialogueManager : MonoBehaviour {
         continueButton.SetActive(false);
         dialogueText.text = "";
         PSScript.enabled = true;
-
+        Blackbar.SetBool("Dialogue", false);
 
         //animator.SetBool("IsOpen", false);
     }

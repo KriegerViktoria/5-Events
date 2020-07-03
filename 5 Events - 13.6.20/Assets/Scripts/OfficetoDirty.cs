@@ -13,6 +13,11 @@ public class OfficetoDirty : MonoBehaviour
     public GameObject oldbackground;
     public GameObject trashlight;
     public GameObject combination;
+    public Pickup pickup;
+    public Pickup pickup2;
+    public Pickup pickup3;
+    public GameObject messytext;
+    public Pickup pickup4;
 
     // Start is called before the first frame update
     public void MakeDirty()
@@ -33,5 +38,12 @@ public class OfficetoDirty : MonoBehaviour
         newbackground.SetActive(true);
         oldbackground.SetActive(false);
         trashlight.SetActive(true);
+        pickup.isNeeded = true;
+        pickup2.isNeeded = true;
+        pickup3.isNeeded = true;
+        pickup3.isNeeded = true;
+        messytext.SetActive(true);
+
+
     }
 }

@@ -11,7 +11,9 @@ public class Lightswitch : MonoBehaviour
     {
         if (LightedObject.isNeeded)
         {
+           
             Light.SetActive(true);
+            
         }
         else
         {

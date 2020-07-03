@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveToggle : MonoBehaviour
 {
-
+    public Animator blende;
 
     public void disablemove()
     {
@@ -16,5 +16,10 @@ public class MoveToggle : MonoBehaviour
         print("enable");
         this.gameObject.layer = 2;
     }
-        }
+
+    public void SetDoorClickedToFalse()
+    {
+        blende.SetBool("DoorClicked", false);
+    }
+}
 

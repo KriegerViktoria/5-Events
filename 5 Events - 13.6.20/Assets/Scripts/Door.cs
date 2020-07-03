@@ -34,6 +34,8 @@ public class Door : MonoBehaviour {
             Player.transform.position = SpawnPoint.transform.position;
             cmOld.SetActive(false);
             cmNew.SetActive(true);
+
+           
             BlendeAnimation.SetBool("DoorClicked", true);
             room.GetComponent<dontwalk>().On = false;
         }
@@ -43,7 +45,8 @@ public class Door : MonoBehaviour {
     {
         if (collision.CompareTag("Player"))
         {
-            BlendeAnimation.SetBool("DoorClicked", false);
+            
+           
             room.GetComponent<dontwalk>().On = true;
         }
     }
