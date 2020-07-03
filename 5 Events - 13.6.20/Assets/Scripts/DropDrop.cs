@@ -25,9 +25,11 @@ public class DropDrop : MonoBehaviour, IDropHandler
         {
             DropInScene.SetActive(true);
             DropInScene.transform.position = this.transform.position;
+            DropInScene.GetComponent<Pickup>().isNeeded = false;
             print("Drop");
             eventData.pointerDrag.SetActive(false);
             eventData.pointerDrag.transform.SetParent(objects.transform);
+            
         }
         //eventData.pointerDrag
     }

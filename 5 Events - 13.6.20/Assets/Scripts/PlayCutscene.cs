@@ -10,11 +10,14 @@ public class PlayCutscene : MonoBehaviour
     public GameObject Trigger;
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         {
-            Cutscene.Play();
-            Trigger.SetActive(false);
+            if (collision.CompareTag("Player"))
+            {
+                Cutscene.Play();
+                Trigger.SetActive(false);
+            }
         
         }
     }

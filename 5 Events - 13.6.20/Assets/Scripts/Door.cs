@@ -2,10 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
-public class Door : MonoBehaviour
-{
+
+public class Door : MonoBehaviour { 
     public GameObject SpawnPoint;
     private GameObject Player;
     public GameObject Blende;
@@ -47,6 +47,7 @@ public class Door : MonoBehaviour
             room.GetComponent<dontwalk>().On = true;
         }
     }
+
 
     // Update is called once per frame
    // private void OnMouseDown()

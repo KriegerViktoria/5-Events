@@ -6,6 +6,6 @@ public class textonlyonce : MonoBehaviour
 {
   public void textonce()
     {
-        this.gameObject.GetComponent<DialogueTrigger>().enabled = false;
+        this.gameObject.layer = 2;
     }
 }
