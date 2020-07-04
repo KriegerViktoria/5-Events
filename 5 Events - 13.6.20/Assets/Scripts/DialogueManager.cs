@@ -12,8 +12,11 @@ public class DialogueManager : MonoBehaviour {
     public PointandClickScript PSScript;
 	public Animator MCAnimator;
     public Animator Blackbar;
+    public GameObject FG1;
+    public GameObject FG2;
+    
 
-	private Queue<string> sentences;
+    private Queue<string> sentences;
 
 	// Use this for initialization
 	void Start () {
@@ -23,10 +26,11 @@ public class DialogueManager : MonoBehaviour {
 
 	public void StartDialogue (Dialogue dialogue)
 	{
-		////
-		//dialogueText.color = dialogue.TextColor;
-		////
-
+        ////
+        //dialogueText.color = dialogue.TextColor;
+        ////
+        FG1.SetActive(false);
+        FG2.SetActive(false);
         PSScript.isMoving = false;
 		MCAnimator.SetBool("Walk", false);
         Blackbar.SetBool("Dialogue", true);
@@ -84,7 +88,8 @@ public class DialogueManager : MonoBehaviour {
         dialogueText.text = "";
         PSScript.enabled = true;
         Blackbar.SetBool("Dialogue", false);
-
+        FG1.SetActive(true);
+        FG2.SetActive(true);
         //animator.SetBool("IsOpen", false);
     }
 
