@@ -10,6 +10,7 @@ public class DropDrop : MonoBehaviour, IDropHandler
     private RectTransform rectTransform;
     Vector3 currentposition;
     private GameObject objects;
+    public lighton light2;
     public void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -19,6 +20,7 @@ public class DropDrop : MonoBehaviour, IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         currentposition = rectTransform.anchoredPosition;
+        eventData.pointerDrag.GetComponent<DragDrop>().showdescription = false;
         //Debug.Log("OnDrop");
 
         if (eventData.pointerDrag == ItemToDrop)
@@ -29,6 +31,10 @@ public class DropDrop : MonoBehaviour, IDropHandler
             print("Drop");
             eventData.pointerDrag.SetActive(false);
             eventData.pointerDrag.transform.SetParent(objects.transform);
+            if(this.gameObject == GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/BroomPlace"))
+            {
+                light2.lighttoggle = false;
+            }
             
         }
         //eventData.pointerDrag

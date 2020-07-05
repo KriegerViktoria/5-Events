@@ -11,7 +11,7 @@ public class crowanim : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 0.0f;
+        speed = 0.02f;
     }
 
     // Update is called once per frame
@@ -24,7 +24,7 @@ public class crowanim : MonoBehaviour
         if (this.gameObject.transform.position.x > end.x)
         {
             this.transform.position = new Vector3(-1.65f, Random.Range(0.4f, 1.4f), 0f);
-            speed = Random.Range(0.06f, 0.011f);
+     
         }
     }
 }

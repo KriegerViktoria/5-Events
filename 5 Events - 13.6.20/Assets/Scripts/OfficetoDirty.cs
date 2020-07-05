@@ -18,6 +18,8 @@ public class OfficetoDirty : MonoBehaviour
     public Pickup pickup3;
     public GameObject messytext;
     public Pickup pickup4;
+    public GameObject boylifttext;
+    public lighton light1, light2, light3, light4, light5;
 
     // Start is called before the first frame update
     public void MakeDirty()
@@ -25,7 +27,7 @@ public class OfficetoDirty : MonoBehaviour
         GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/ThickBookPlace").SetActive(true);
         GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/LaundryBasketPlace").SetActive(true);
         GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/ChairPlace").SetActive(true);
-        GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/Trashcan").SetActive(true);
+        GameObject.Find("/__________INTERACTFG__________/Canvas/Trashcan").SetActive(true);
         GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/Dirt").SetActive(true);
         GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/ReactionTrigger").SetActive(true);
         GameObject.Find("/__________Collectibles_______/ErsteHilfeSet").SetActive(false);
@@ -43,7 +45,12 @@ public class OfficetoDirty : MonoBehaviour
         pickup3.isNeeded = true;
         pickup3.isNeeded = true;
         messytext.SetActive(true);
-
+        boylifttext.SetActive(false);
+        light1.lighttoggle = true;
+        light2.lighttoggle = true;
+        light3.lighttoggle = true;
+        light4.lighttoggle = true;
+        light5.lighttoggle = true;
 
     }
 }

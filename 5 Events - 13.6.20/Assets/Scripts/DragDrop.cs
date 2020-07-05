@@ -12,6 +12,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     Vector3 currentposition;
     GameObject[] nointeractiontext;
     int index;
+    public bool showdescription = true;
 
     private void Awake()
     {
@@ -23,18 +24,21 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
     public void OnPointerDown(PointerEventData eventData)
     {
-
+        showdescription = true;
     }
 
 
     public void OnPointerClick(PointerEventData eventData)
     {
-
+      
+            this.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue();
+      
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        this.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue();
+      
+      //  this.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue();
     }
 
 
@@ -52,12 +56,17 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     }
     public void OnEndDrag(PointerEventData eventData)
     {
-       // Debug.Log("OnEndDrag");
+        // Debug.Log("OnEndDrag");
+        print("enddrag");
         rectTransform.anchoredPosition = currentposition;
         canvasGroup.blocksRaycasts = true;
         index = Random.Range(0, nointeractiontext.Length);
-        nointeractiontext[index].GetComponent<DialogueTrigger>().TriggerDialogue();
 
+        if (showdescription == true)
+        {
+           
+            nointeractiontext[index].GetComponent<DialogueTrigger>().TriggerDialogue();
+        }
     }
 
 

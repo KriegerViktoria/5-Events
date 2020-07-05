@@ -19,7 +19,7 @@ public class dontwalk : MonoBehaviour
         {
             if (collision.CompareTag("Player"))
             {
-                print("player is on");
+               // print("player is on");
                 playerpos = collision.transform.position;
             }
         }

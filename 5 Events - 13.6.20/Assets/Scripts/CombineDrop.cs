@@ -22,6 +22,8 @@ public class CombineDrop : MonoBehaviour, IDropHandler
     {
         currentposition = rectTransform.anchoredPosition;
         // Debug.Log("OnDrop");
+        print("onDropcomb");
+        eventData.pointerDrag.GetComponent<DragDrop>().showdescription = false;
 
         if (eventData.pointerDrag == ItemToCombineWith)
         {

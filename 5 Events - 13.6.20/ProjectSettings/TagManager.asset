@@ -53,6 +53,9 @@ TagManager:
   - name: Background
     uniqueID: 1203007855
     locked: 0
+  - name: nolight
+    uniqueID: 257504317
+    locked: 0
   - name: NPC
     uniqueID: 3647360445
     locked: 0
