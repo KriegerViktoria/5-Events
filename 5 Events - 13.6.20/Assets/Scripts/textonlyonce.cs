@@ -6,6 +6,7 @@ public class textonlyonce : MonoBehaviour
 {
   public void textonce()
     {
-        this.gameObject.layer = 2;
-    }
+        print("up");
+        this.gameObject.SetActive(false);
+            }
 }

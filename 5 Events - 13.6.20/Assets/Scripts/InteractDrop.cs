@@ -29,7 +29,7 @@ public class InteractDrop : MonoBehaviour, IDropHandler
             eventData.pointerDrag.SetActive(false);
             eventData.pointerDrag.transform.SetParent(objects.transform);
             this.gameObject.SetActive(false);
-            eventData.pointerDrag.GetComponent<DialogueTrigger>().TriggerDialogue();
+            influence.GetComponent<DialogueTrigger>().TriggerDialogue();
         }
 
             if (eventData.pointerDrag == ItemToInteractWith && this.gameObject == GameObject.Find("/__________WRS UI__________/Canvas/-----CROPS_TRIGGER/BuildLadder"))

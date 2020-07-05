@@ -9,6 +9,7 @@ TagManager:
   - Blende
   - Range
   - DoorCollider
+  - NoInteraction
   layers:
   - Default
   - TransparentFX

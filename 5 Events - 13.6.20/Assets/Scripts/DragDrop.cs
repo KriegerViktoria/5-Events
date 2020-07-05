@@ -4,20 +4,38 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler,IPointerDownHandler, IPointerClickHandler, IPointerUpHandler
 {
     [SerializeField] private Canvas canvas;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     Vector3 currentposition;
+    GameObject[] nointeractiontext;
+    int index;
 
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
+        nointeractiontext = GameObject.FindGameObjectsWithTag("NoInteraction");
         
     }
 
+    public void OnPointerDown(PointerEventData eventData)
+    {
+
+    }
+
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        this.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue();
+    }
 
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -37,12 +55,10 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
        // Debug.Log("OnEndDrag");
         rectTransform.anchoredPosition = currentposition;
         canvasGroup.blocksRaycasts = true;
+        index = Random.Range(0, nointeractiontext.Length);
+        nointeractiontext[index].GetComponent<DialogueTrigger>().TriggerDialogue();
+
     }
-    public void OnPointerDown(PointerEventData eventData)
-    {
-       //s Debug.Log("OnPointerDown");
-     
-            }
 
 
 

@@ -16,6 +16,8 @@ public class doordrop : MonoBehaviour, IDropHandler
     public GameObject mylight;
     public GameObject DoorToOffice;
     public GameObject objects;
+    public GameObject passwordtext1;
+    public GameObject passqordtext2;
     public AudioSource wrongSound;
     public AudioSource rightSound;
     public AudioClip _right;
